@@ -4,15 +4,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CpfPipePipe } from './pipes/cpf-pipe.pipe';
+
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent, CpfPipePipe],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

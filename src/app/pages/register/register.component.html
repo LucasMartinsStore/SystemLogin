@@ -1,0 +1,61 @@
+<div
+  Class="bg-primary-600 flex justify-content-center align-items-center h-screen overflow-x-hidden		"
+>
+  <p-card
+    class="flex justify-content-center p-3"
+    styleClass="text-cyan-500"
+    header="Register"
+  >
+    <div>
+      <form [formGroup]="registerForm" class="flex gap-4 flex-column">
+        <p-floatLabel>
+          <input
+            id="username"
+            type="text"
+            pInputText
+            formControlName="username"
+          />
+          <label for="username">Username</label>
+        </p-floatLabel>
+
+        <p-floatLabel>
+          <input
+            id="username"
+            type="email"
+            pInputText
+            formControlName="email"
+          />
+          <label for="username">Email</label>
+        </p-floatLabel>
+
+        <p-floatLabel>
+          <p-inputMask
+            id="cpf"
+            formControlName="cpf"
+            mask="999.999.999-99"
+            placeholder="___.___.___-__"
+          ></p-inputMask>
+          <label for="cpf">CPF</label>
+        </p-floatLabel>
+
+        <p-floatLabel>
+          <input
+            id="username"
+            type="password"
+            pInputText
+            formControlName="password"
+          />
+          <label for="username">Password</label>
+        </p-floatLabel>
+
+        <p-calendar
+          placeholder="Birthday"
+          dateFormat="dd/mm/yy"
+          formControlName="birthday"
+        />
+
+        <p-button label="Submit" />
+      </form>
+    </div>
+  </p-card>
+</div>
